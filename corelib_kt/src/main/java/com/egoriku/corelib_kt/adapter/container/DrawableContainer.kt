@@ -4,7 +4,7 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.support.annotation.DrawableRes
 import android.support.v4.util.SparseArrayCompat
-import com.egoriku.core_lib_kt.extensions.drawableCompat
+import com.egoriku.corelib_kt.extensions.drawableCompat
 
 class DrawableContainer(val context: Context) : SparseArrayCompat<Drawable>() {
 

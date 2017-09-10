@@ -4,7 +4,6 @@ import android.support.annotation.LayoutRes
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import com.egoriku.core_lib_kt.extensions.inflate
 import com.egoriku.corelib_kt.extensions.inflate
 
 abstract class AbstractAdapter<Item> : RecyclerView.Adapter<AbstractViewHolder>() {

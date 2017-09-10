@@ -66,3 +66,6 @@ dependencies {
 
     implementation "com.jakewharton.timber:timber:$timber"
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
