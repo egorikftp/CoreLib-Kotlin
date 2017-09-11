@@ -5,7 +5,7 @@ buildscript {
         buildTools = '26.0.1'
         minSDK = 16
         targetSDK = 26
-        gradleTools = '3.0.0-beta5'
+        gradleTools = '2.3.3'
 
         supportLibrary = '26.0.1'
         customTabs = '25.3.1'
@@ -15,11 +15,13 @@ buildscript {
         timber = '4.5.1'
 
         bintray_plugin = '1.4'
-        maven_gradle = '1.3'
+        maven_gradle = '1.4.1'
     }
 
     repositories {
-        google()
+        maven {
+            url 'https://maven.google.com'
+        }
         jcenter()
     }
     dependencies {
@@ -32,7 +34,9 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
+        maven {
+            url 'https://maven.google.com'
+        }
         jcenter()
     }
 }
