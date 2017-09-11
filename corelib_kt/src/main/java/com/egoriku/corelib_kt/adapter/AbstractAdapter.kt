@@ -17,9 +17,8 @@ abstract class AbstractAdapter<Item> : RecyclerView.Adapter<AbstractViewHolder>(
     @LayoutRes
     abstract fun getLayout(): Int
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AbstractViewHolder {
-        return onCreateHolder(parent.inflate(getLayout()), viewType)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AbstractViewHolder =
+            onCreateHolder(parent.inflate(getLayout()), viewType)
 
     override fun onBindViewHolder(holder: AbstractViewHolder, position: Int) {
         onBindHolder(holder, getItem(position), position, getItemViewType(position))

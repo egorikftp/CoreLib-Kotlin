@@ -33,4 +33,5 @@ dependencies {
     compile "com.android.support:design:$supportLibrary", {
         exclude group: "com.android.support:customtabs:$customTabs"
     }
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

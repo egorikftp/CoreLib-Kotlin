@@ -2,19 +2,20 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 ext {
-    bintrayRepo = 'core_lib_kt'
+    bintrayRepo = 'maven'
     bintrayName = 'CoreLib_Kotlin'
 
     publishedGroupId = 'com.egoriku.corelib_kt'
     libraryName = 'CoreLib_Kotlin'
-    artifact = 'core_lib_kt'
+    artifact = 'corelib_kt'
 
     libraryDescription = 'It\'s a lightweight core library for simplify your life'
+    organization = ''
 
     siteUrl = 'https://github.com/egorikftp/CoreLib-Kotlin'
     gitUrl = 'https://github.com/egorikftp/CoreLib-Kotlin.git'
 
-    libraryVersion = '0.0.1'
+    libraryVersion = '1.0.0'
 
     developerId = 'egorikftp'
     developerName = 'Yahor Urbanovich'
@@ -34,8 +35,6 @@ android {
         targetSdkVersion targetSDK
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -44,7 +43,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
@@ -67,5 +65,5 @@ dependencies {
     compile "com.jakewharton.timber:timber:$timber"
 }
 
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/install.gradle'
+apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/bintray.gradle'

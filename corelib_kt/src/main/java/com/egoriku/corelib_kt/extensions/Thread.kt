@@ -1,17 +1,20 @@
 package com.egoriku.corelib_kt.extensions
 
+import android.os.Handler
+import android.os.Looper
+
 fun runAsync(action: () -> Unit) = Thread(Runnable(action)).start()
 
 fun runOnUiThread(action: () -> Unit) {
     if (isMainLooperAlive()) {
         action()
     } else {
-        android.os.Handler(android.os.Looper.getMainLooper()).post(Runnable(action))
+        Handler(Looper.getMainLooper()).post(Runnable(action))
     }
 }
 
-fun runDelayed(delayMillis: Long, action: () -> Unit) = android.os.Handler().postDelayed(Runnable(action), delayMillis)
+fun runDelayed(delayMillis: Long, action: () -> Unit) = Handler().postDelayed(Runnable(action), delayMillis)
 
-fun runDelayedOnUiThread(delayMillis: Long, action: () -> Unit) = android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(Runnable(action), delayMillis)
+fun runDelayedOnUiThread(delayMillis: Long, action: () -> Unit) = Handler(Looper.getMainLooper()).postDelayed(Runnable(action), delayMillis)
 
-private fun isMainLooperAlive() = android.os.Looper.myLooper() == android.os.Looper.getMainLooper()
+private fun isMainLooperAlive() = Looper.myLooper() == Looper.getMainLooper()

@@ -15,17 +15,11 @@ open class AbstractViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView
     private val drawableContainer = DrawableContainer(context)
 
     @Suppress("UNCHECKED_CAST")
-    operator fun <T : View> get(viewId: Int): T {
-        return viewContainer.getView(viewId) as T
-    }
+    operator fun <T : View> get(viewId: Int): T = viewContainer.getView(viewId) as T
 
-    fun getString(stringRes: Int): String {
-        return stringContainer.getRes(stringRes)
-    }
+    fun getString(stringRes: Int): String = stringContainer.getRes(stringRes)
 
-    fun getDrawable(drawableRes: Int): Drawable {
-        return drawableContainer.getRes(drawableRes)
-    }
+    fun getDrawable(drawableRes: Int): Drawable = drawableContainer.getRes(drawableRes)
 
     val context: Context
         get() = itemView.context

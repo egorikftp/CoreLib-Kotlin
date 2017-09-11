@@ -6,7 +6,7 @@ import android.support.annotation.DrawableRes
 import android.support.v4.util.SparseArrayCompat
 import com.egoriku.corelib_kt.extensions.drawableCompat
 
-class DrawableContainer(val context: Context) : SparseArrayCompat<Drawable>() {
+class DrawableContainer(private val context: Context) : SparseArrayCompat<Drawable>() {
 
     fun getRes(@DrawableRes id: Int): Drawable {
         var drawable: Drawable? = get(id)

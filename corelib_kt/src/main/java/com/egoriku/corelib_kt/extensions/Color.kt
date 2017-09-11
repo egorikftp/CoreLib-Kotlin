@@ -6,6 +6,5 @@ import android.content.Context
 import android.support.annotation.ColorRes
 import android.support.v4.content.ContextCompat
 
-inline fun colorCompat(context: Context, @ColorRes colorInt: Int): Int {
-    return ContextCompat.getColor(context, colorInt)
-}
+inline fun colorCompat(context: Context, @ColorRes colorInt: Int): Int =
+        ContextCompat.getColor(context, colorInt)
