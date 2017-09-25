@@ -9,7 +9,7 @@ buildscript {
         customTabs = '25.3.1'
         kotlin_version = '1.1.4-3'
         timber = '4.5.1'
-        bintray_plugin = '1.4'
+        bintray_plugin = '1.7.3'
         maven_gradle = '1.4.1'
     }
 

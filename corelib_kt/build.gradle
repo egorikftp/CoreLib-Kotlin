@@ -1,31 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'CoreLib_Kotlin'
-
-    publishedGroupId = 'com.egoriku.corelib_kt'
-    libraryName = 'CoreLib_Kotlin'
-    artifact = 'corelib_kt'
-
-    libraryDescription = 'It\'s a lightweight core library for simplify your life'
-    organization = ''
-
-    siteUrl = 'https://github.com/egorikftp/CoreLib-Kotlin'
-    gitUrl = 'https://github.com/egorikftp/CoreLib-Kotlin.git'
-
-    libraryVersion = '1.0.0'
-
-    developerId = 'egorikftp'
-    developerName = 'Yahor Urbanovich'
-    developerEmail = 'egorikftp@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
 android {
     compileSdkVersion compileSDK
     buildToolsVersion buildTools
@@ -33,15 +8,19 @@ android {
     defaultConfig {
         minSdkVersion minSDK
         targetSdkVersion targetSDK
-        versionCode 1
-        versionName "1.0"
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
         }
+    }
+
+    tasks.withType(Javadoc).all {
+        enabled = false
     }
 }
 
@@ -65,5 +44,24 @@ dependencies {
     compile "com.jakewharton.timber:timber:$timber"
 }
 
-apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/install.gradle'
-apply from: 'https://raw.githubusercontent.com/quangctkm9207/template-files/master/android/gradle/bintray.gradle'
+android.libraryVariants.all { variant ->
+    if (variant.buildType.isDebuggable()) {
+        return; // Skip debug builds.
+    }
+    task("javadoc${variant.name.capitalize()}", type: Javadoc) {
+        description "Generates Javadoc for $variant.name."
+        source = variant.javaCompile.source
+        ext.androidJar = System.getenv("ANDROID_HOME") +
+                "/platforms/${android.compileSdkVersion}/android.jar"
+        classpath = files(variant.javaCompile.classpath.files) + files(ext.androidJar)
+    }
+
+    task("bundleJavadoc${variant.name.capitalize()}", type: Jar) {
+        description "Bundles Javadoc into zip for $variant.name."
+        classifier = "javadoc"
+        from tasks["javadoc${variant.name.capitalize()}"]
+    }
+}
+
+apply from: 'android-artifacts.gradle'
+apply from: 'bintray-publish.gradle'
