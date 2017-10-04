@@ -12,11 +12,7 @@ Two simple steps:
 ```
 allprojects {
     repositories {
-        google()
-        jcenter()
-        maven {
-            url "https://dl.bintray.com/egorikftp/maven"
-        }
+         jcenter()
     }
 }
 ```
