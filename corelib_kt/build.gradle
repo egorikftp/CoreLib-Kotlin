@@ -25,23 +25,26 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
-    compile "com.android.support:appcompat-v7:$supportLibrary", {
+    implementation "com.android.support:appcompat-v7:$supportLibrary", {
         exclude group: "com.android.support:customtabs:$customTabs"
     }
 
-    compile "com.android.support:recyclerview-v7:$supportLibrary", {
+    implementation "com.android.support:recyclerview-v7:$supportLibrary", {
         exclude group: "com.android.support:customtabs:$customTabs"
     }
 
-    compile "com.android.support:design:$supportLibrary", {
+    implementation "com.android.support:design:$supportLibrary", {
         exclude group: "com.android.support:customtabs:$customTabs"
     }
 
-    compile "com.jakewharton.timber:timber:$timber"
+    implementation "com.jakewharton.timber:timber:$timber"
+
+    implementation "android.arch.lifecycle:extensions:$archComponents"
+    annotationProcessor "android.arch.lifecycle:compiler:$archComponents"
 }
 
 android.libraryVariants.all { variant ->
