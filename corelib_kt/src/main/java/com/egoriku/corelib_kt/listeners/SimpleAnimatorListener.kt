@@ -8,7 +8,6 @@ abstract class SimpleAnimatorListener : Animator.AnimatorListener {
     }
 
     override fun onAnimationEnd(animation: Animator?, isReverse: Boolean) {
-        super.onAnimationEnd(animation, isReverse)
     }
 
     override fun onAnimationEnd(p0: Animator?) {
@@ -18,7 +17,6 @@ abstract class SimpleAnimatorListener : Animator.AnimatorListener {
     }
 
     override fun onAnimationStart(animation: Animator?, isReverse: Boolean) {
-        super.onAnimationStart(animation, isReverse)
     }
 
     override fun onAnimationStart(p0: Animator?) {
