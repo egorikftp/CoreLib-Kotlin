@@ -11,7 +11,7 @@ interface MainContract {
         fun updateProgressPercentage(percent: Int)
     }
 
-    interface Presenter:BaseContract.Presenter<MainContract.View>{
+    interface Presenter : BaseContract.Presenter<MainContract.View> {
         fun doSomeWithDelay(delay: Long)
     }
 }
