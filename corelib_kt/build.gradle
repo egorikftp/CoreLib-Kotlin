@@ -44,12 +44,12 @@ dependencies {
     implementation "com.jakewharton.timber:timber:$timber"
 
     implementation "android.arch.lifecycle:extensions:$archComponents"
-    annotationProcessor "android.arch.lifecycle:compiler:$archComponents"
+    kapt "android.arch.lifecycle:compiler:$archComponents"
 }
 
 android.libraryVariants.all { variant ->
     if (variant.buildType.isDebuggable()) {
-        return; // Skip debug builds.
+        return // Skip debug builds.
     }
     task("javadoc${variant.name.capitalize()}", type: Javadoc) {
         description "Generates Javadoc for $variant.name."
