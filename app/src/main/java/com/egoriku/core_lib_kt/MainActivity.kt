@@ -3,6 +3,8 @@ package com.egoriku.core_lib_kt
 import android.os.Bundle
 import android.view.View
 import android.app.ProgressDialog
+import com.egoriku.corelib_kt.arch.BaseActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(),
