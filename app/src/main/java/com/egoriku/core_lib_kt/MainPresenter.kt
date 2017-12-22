@@ -1,9 +1,9 @@
 package com.egoriku.core_lib_kt
 
-import com.egoriku.corelib_kt.arch.BasePresenter
 import android.os.Handler
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.OnLifecycleEvent
+import com.egoriku.corelib_kt.arch.BasePresenter
 import com.egoriku.corelib_kt.timber.d
 
 
@@ -13,7 +13,7 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
     private val PROGRESS_BAR_STATE_KEY = "progress_bar_state_key"
     private val TAG = "MainActivityPresenter"
 
-    private val viewStateBundle = bundle
+    private val viewStateBundle = stateBundle
     private var progressTime: Long = 0
 
 
