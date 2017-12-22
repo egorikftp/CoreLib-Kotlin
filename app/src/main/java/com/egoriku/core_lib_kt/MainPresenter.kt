@@ -13,7 +13,7 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
     private val PROGRESS_BAR_STATE_KEY = "progress_bar_state_key"
     private val TAG = "MainActivityPresenter"
 
-    private val viewStateBundle = stateBundle
+    private val viewStateBundle = bundle
     private var progressTime: Long = 0
 
 

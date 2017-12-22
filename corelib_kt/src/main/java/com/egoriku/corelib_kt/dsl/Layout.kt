@@ -1,6 +1,6 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package com.egoriku.corelib_kt.extensions
+package com.egoriku.corelib_kt.dsl
 
 import android.view.LayoutInflater
 import android.view.View
