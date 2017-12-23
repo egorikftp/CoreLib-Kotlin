@@ -1,4 +1,4 @@
-package com.egoriku.core_lib_kt
+package com.egoriku.corelibkt
 
 import android.os.Bundle
 import android.view.View

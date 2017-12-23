@@ -1,4 +1,4 @@
-package com.egoriku.core_lib_kt
+package com.egoriku.corelibkt
 
 import android.os.Handler
 import android.arch.lifecycle.Lifecycle
@@ -6,12 +6,12 @@ import android.arch.lifecycle.OnLifecycleEvent
 import com.egoriku.corelib_kt.arch.BasePresenter
 import com.egoriku.corelib_kt.timber.d
 
-
 class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter {
 
-    private val PROGRESS_BAR_PERCENT_KEY = "progress_bar_percent_key"
-    private val PROGRESS_BAR_STATE_KEY = "progress_bar_state_key"
-    private val TAG = "MainActivityPresenter"
+    companion object {
+        private const val PROGRESS_BAR_PERCENT_KEY = "progress_bar_percent_key"
+        private const val PROGRESS_BAR_STATE_KEY = "progress_bar_state_key"
+    }
 
     private val viewStateBundle = stateBundle
     private var progressTime: Long = 0
@@ -66,6 +66,6 @@ class MainPresenter : BasePresenter<MainContract.View>(), MainContract.Presenter
 
     override fun onPresenterDestroy() {
         super.onPresenterDestroy()
-        d(TAG, "Presenter destroyed")
+        d("TAG", "Presenter destroyed")
     }
 }

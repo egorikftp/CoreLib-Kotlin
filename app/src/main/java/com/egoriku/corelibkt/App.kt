@@ -1,4 +1,4 @@
-package com.egoriku.core_lib_kt
+package com.egoriku.corelibkt
 
 import com.egoriku.corelib_kt.DebugApplication
 
