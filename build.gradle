@@ -4,7 +4,7 @@ buildscript {
         minSDK = 19
         targetSDK = 27
 
-        gradleTools = '3.0.1'
+        gradleTools = '2.3.3'
         buildTools = '27.0.2'
 
         supportLibrary = '27.0.2'
@@ -21,7 +21,9 @@ buildscript {
 
     repositories {
         jcenter()
-        google()
+        maven {
+            url 'https://maven.google.com'
+        }
     }
 
     dependencies {
@@ -35,7 +37,9 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        google()
+        maven {
+            url 'https://maven.google.com'
+        }
     }
 }
 

@@ -29,17 +29,17 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':corelib_kt')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(path: ':corelib_kt')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
-    implementation "com.android.support:appcompat-v7:$supportLibrary", {
+    compile "com.android.support:appcompat-v7:$supportLibrary", {
         exclude group: "com.android.support:customtabs:$customTabs"
     }
 
-    implementation "com.android.support:design:$supportLibrary", {
+    compile "com.android.support:design:$supportLibrary", {
         exclude group: "com.android.support:customtabs:$customTabs"
     }
-    implementation "com.android.support.constraint:constraint-layout:$constraintLayout"
+    compile "com.android.support.constraint:constraint-layout:$constraintLayout"
 }
