@@ -1,4 +1,4 @@
-package com.egoriku.corelibkt
+package com.egoriku.example
 
 import android.os.Handler
 import android.arch.lifecycle.Lifecycle

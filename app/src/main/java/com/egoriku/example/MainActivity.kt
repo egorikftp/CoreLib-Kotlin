@@ -1,4 +1,4 @@
-package com.egoriku.corelibkt
+package com.egoriku.example
 
 import android.os.Bundle
 import android.view.View
@@ -9,7 +9,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity<MainContract.View, MainContract.Presenter>(),
         MainContract.View, View.OnClickListener {
-
 
     private lateinit var progressDialog: ProgressDialog
 

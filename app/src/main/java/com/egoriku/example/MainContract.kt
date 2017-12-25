@@ -1,4 +1,4 @@
-package com.egoriku.corelibkt
+package com.egoriku.example
 
 import com.egoriku.corelib_kt.arch.BaseContract
 
