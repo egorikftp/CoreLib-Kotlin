@@ -1,5 +1,8 @@
 # CoreLib-Kotlin
 
+[![](https://jitpack.io/v/egorikftp/CoreLib-Kotlin.svg)](https://jitpack.io/#egorikftp/CoreLib-Kotlin)
+
+
 I don't like write the same code every time :sunglasses: 
 
 Let's save your time and use modern features Kotlin language :heartpulse:
