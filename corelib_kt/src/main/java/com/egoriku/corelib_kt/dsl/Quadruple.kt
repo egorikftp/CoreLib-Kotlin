@@ -1,4 +1,4 @@
-package com.egoriku.corelib_kt.extensions
+package com.egoriku.corelib_kt.dsl
 
 class Quadruple<A1, A2, A3, A4>(private val a1: A1, private val a2: A2, private val a3: A3, private val a4: A4) {
     operator fun component1(): A1 = a1

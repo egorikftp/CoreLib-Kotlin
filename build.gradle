@@ -1,23 +1,29 @@
 buildscript {
     ext {
-        compileSDK = 26
-        buildTools = '26.0.1'
-        minSDK = 16
-        targetSDK = 26
+        compileSDK = 27
+        minSDK = 19
+        targetSDK = 27
+
         gradleTools = '2.3.3'
-        supportLibrary = '26.0.1'
+        buildTools = '27.0.2'
+
+        supportLibrary = '27.0.2'
         customTabs = '25.3.1'
-        kotlin_version = '1.1.4-3'
-        timber = '4.5.1'
+        timber = '4.6.0'
+        archComponents = '1.0.0'
+        constraintLayout = '1.0.2'
+
+        kotlin_version = '1.2.10'
+
         bintray_plugin = '1.7.3'
         maven_gradle = '1.4.1'
     }
 
     repositories {
+        jcenter()
         maven {
             url 'https://maven.google.com'
         }
-        jcenter()
     }
 
     dependencies {
@@ -30,10 +36,10 @@ buildscript {
 
 allprojects {
     repositories {
+        jcenter()
         maven {
             url 'https://maven.google.com'
         }
-        jcenter()
     }
 }
 

@@ -1,6 +1,8 @@
+@file:Suppress("unused")
+
 package com.egoriku.corelib_kt
 
 object Constants {
-    @JvmStatic
-    val SPACE = " "
+    const val SPACE = " "
+    const val EMPTY = ""
 }

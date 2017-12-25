@@ -1,4 +1,4 @@
-package com.egoriku.corelib_kt.extensions
+package com.egoriku.corelib_kt.dsl
 
 import android.support.annotation.ColorInt
 import android.support.annotation.StringRes

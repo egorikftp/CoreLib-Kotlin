@@ -1,9 +1,9 @@
-package com.egoriku.corelib_kt.extensions
+package com.egoriku.corelib_kt.dsl
 
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-object DelegatesExt {
+object DelegatesDsl {
     fun <T> notNullSingleValue(): ReadWriteProperty<Any?, T> = NotNullSingleValueVar()
 }
 

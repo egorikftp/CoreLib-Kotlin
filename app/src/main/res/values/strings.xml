@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">core_lib_kt</string>
+    <string name="show_progress">Show progress</string>
 </resources>
