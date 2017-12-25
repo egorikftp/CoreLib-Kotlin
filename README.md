@@ -14,14 +14,17 @@ Two simple steps:
 
 ```
 allprojects {
-    repositories {
-         jcenter()
-    }
-}
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 ```
 
 2. Add dependency for you app build.gradle:
 
 ```
-  implementation 'com.egoriku:CoreLib_Kotlin:0.0.1'
+  dependencies {
+	        implementation 'com.github.egorikftp:CoreLib-Kotlin:0.0.7'
+	}
 ```
