@@ -12,19 +12,20 @@ Two simple steps:
 
 1. Add to project build.gradle file this code:
 
-```
+```groovy
+
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 2. Add dependency for you app build.gradle:
 
-```
+```groovy
   dependencies {
-	        implementation 'com.github.egorikftp:CoreLib-Kotlin:0.0.7'
-	}
+  	implementation 'com.github.egorikftp:CoreLib-Kotlin:0.0.7'
+}
 ```
